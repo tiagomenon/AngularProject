@@ -1,0 +1,13 @@
+
+<div *ngIf="isLoading" class="loading">
+    <mat-spinner >Loading...</mat-spinner>
+</div>
+
+<div *ngIf="!isLoading">
+    <h1>Productos</h1>
+<div *ngFor="let productos of routes">
+    <app-product
+    [data]="productos">
+    </app-product>
+</div>
+</div>
